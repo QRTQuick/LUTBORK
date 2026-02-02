@@ -1,3 +1,15 @@
+/*
+ * LUTBORK - Advanced System Information Tool
+ * Disk Information Module Header
+ * 
+ * Author: Chisom Life Eke
+ * Company: Quick Red Tech
+ * Year: 2026
+ * Role: Chief Executive Officer
+ * 
+ * Description: Hard disk analysis, SSD/HDD detection, and storage enumeration
+ */
+
 #ifndef DISK_INFO_H
 #define DISK_INFO_H
 

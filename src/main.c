@@ -1,3 +1,15 @@
+/*
+ * LUTBORK - Advanced System Information Tool
+ * 
+ * Author: Chisom Life Eke
+ * Company: Quick Red Tech
+ * Year: 2026
+ * Role: Chief Executive Officer
+ * 
+ * Description: Main program controller for LUTBORK system diagnostic tool
+ * Features: Interactive menu system, modular architecture, cross-platform support
+ */
+
 #include "colors.h"
 #include "disk_info.h"
 #include "driver_info.h"

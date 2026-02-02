@@ -1,3 +1,15 @@
+/*
+ * LUTBORK - Advanced System Information Tool
+ * Colors and UI Module
+ * 
+ * Author: Chisom Life Eke
+ * Company: Quick Red Tech
+ * Year: 2026
+ * Role: Chief Executive Officer
+ * 
+ * Description: Display functions, color management, and user interface utilities
+ */
+
 #ifndef COLORS_H
 #define COLORS_H
 

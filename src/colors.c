@@ -1,3 +1,15 @@
+/*
+ * LUTBORK - Advanced System Information Tool
+ * Colors and UI Implementation
+ * 
+ * Author: Chisom Life Eke
+ * Company: Quick Red Tech
+ * Year: 2026
+ * Role: Chief Executive Officer
+ * 
+ * Description: Implementation of display functions and user interface utilities
+ */
+
 #include "colors.h"
 #include <stdio.h>
 #include <unistd.h>

@@ -1,17 +1,34 @@
-# System Information & Colorful ASCII C/C++ Programs
+# LUTBORK - System Information & Colorful ASCII C/C++ Programs
 
-This comprehensive collection demonstrates advanced system diagnostic capabilities combined with colorful, interactive console applications using C and C++ with ASCII art, terminal colors, and sound effects.
+**LUTBORK** is a comprehensive system diagnostic tool developed by **Chisom Life Eke**, CEO of **Quick Red Tech** (2026). This advanced system information tool provides detailed hardware analysis with a clean, professional interface.
+
+## Author Information
+
+**Developer**: Chisom Life Eke  
+**Company**: Quick Red Tech  
+**Year**: 2026  
+**Role**: Chief Executive Officer  
 
 ## Programs Included
 
-### 1. `colorful_ascii.c` - Basic C Color Demo
+### 1. **LUTBORK Core** - Advanced System Information Tool
+- **Hard disk type detection and analysis**
+- **All connected drives enumeration**
+- **Installed device drivers listing**
+- **Kernel information and version details**
+- **Physical disk analysis (SSD vs HDD detection)**
+- Cross-platform support (Windows/Linux)
+- Colorful presentation with clean interface
+- Modular C architecture with professional build system
+
+### 2. `colorful_ascii.c` - Basic C Color Demo
 - ANSI color codes for text coloring
 - ASCII box drawing characters
 - Simple beep sounds using `\a`
 - Animated loading spinner
 - Rainbow-colored ASCII art
 
-### 2. `ascii_art_cpp.cpp` - Advanced C++ Showcase
+### 3. `ascii_art_cpp.cpp` - Advanced C++ Showcase
 - Object-oriented approach with ColoredASCII class
 - Animated rocket ASCII art
 - Progress bar animation
@@ -19,31 +36,217 @@ This comprehensive collection demonstrates advanced system diagnostic capabiliti
 - Special Unicode characters
 - Threaded animations
 
-### 3. `game_ascii.c` - Interactive Dice Game
+### 4. `game_ascii.c` - Interactive Dice Game
 - Colorful ASCII dice graphics
 - Interactive gameplay
 - Sound effects for different events
 - Victory celebrations with animations
 - Dynamic color changes based on dice value
 
-### 4. `system_info.c` - System Information Tool
-- **Hard disk type detection and analysis**
-- **All connected drives enumeration**
-- **Installed device drivers listing**
-- **Kernel information and version details**
-- **Physical disk analysis (SSD vs HDD detection)**
-- Cross-platform support (Windows/Linux)
-- Colorful presentation with ASCII graphics
+### 5. `system_info.c` - Legacy System Information Tool
+- Basic system information gathering
+- Windows API integration
+- Hardware detection capabilities
 
-### 5. `advanced_system_info.cpp` - Advanced System Diagnostic
-- **Comprehensive disk analysis with usage statistics**
-- **Detailed driver information with hardware IDs**
-- **Complete kernel and system architecture analysis**
-- **Memory usage monitoring with progress bars**
-- **Available kernels detection**
-- **Hardware bus enumeration**
+### 6. `advanced_system_info.cpp` - Enhanced System Diagnostic
+- Comprehensive disk analysis with usage statistics
+- Detailed driver information with hardware IDs
+- Complete kernel and system architecture analysis
+- Memory usage monitoring with progress bars
+- Available kernels detection
+- Hardware bus enumeration
 - Advanced C++ object-oriented design
 - Animated progress indicators
+
+## LUTBORK Core Features
+
+### Hard Disk Analysis
+- **Drive Type Detection**: Identifies Fixed drives (HDD/SSD), Removable drives (USB), Network drives, Optical drives (CD/DVD), and RAM disks
+- **Physical Disk Information**: Shows disk geometry, size, cylinders, tracks, sectors
+- **SSD vs HDD Detection**: Uses Windows IOCTL calls to determine if drives have seek penalty (HDD) or not (SSD)
+- **Disk Usage Statistics**: Total, used, and free space with visual progress bars
+- **Partition Analysis**: Lists all partitions with sizes and types
+- **Mount Point Information**: Shows mounted filesystems with usage statistics
+
+### Driver Information
+- **Installed Device Drivers**: Enumerates all devices with installed drivers
+- **Driver Versions**: Shows driver version information where available
+- **Hardware IDs**: Displays hardware identification strings
+- **Device Categories**: Groups devices by type and function
+- **Kernel Modules**: Lists loaded kernel modules (Linux) with size and dependency information
+- **Hardware Buses**: Shows available hardware buses (PCI, USB, etc.)
+
+### Kernel & System Analysis
+- **Kernel Version**: Complete kernel version and build information
+- **System Architecture**: Processor architecture (x86, x64, ARM, ARM64)
+- **Available Kernels**: Lists all available kernel images in /boot (Linux)
+- **Kernel Parameters**: Shows current boot parameters
+- **Memory Information**: Total, used, and available RAM with usage visualization
+- **System Uptime**: Shows how long the system has been running
+- **Load Average**: Current system load (Linux)
+
+### Cross-Platform Support
+- **Windows**: Uses Win32 API, WMI, and IOCTL calls for comprehensive system information
+- **Linux**: Reads from /proc and /sys filesystems for kernel and hardware data
+- **Automatic Detection**: Code automatically adapts to the target platform
+
+## Building and Running
+
+### Quick Start (Windows)
+```batch
+# Build LUTBORK
+build_modular.bat
+
+# Run LUTBORK
+bin\lutbork.exe
+
+# Run interactive demo menu
+run_all_demos.bat
+```
+
+### Using Make (Cross-platform)
+```bash
+# Build LUTBORK
+make -f Makefile_modular
+
+# Run LUTBORK
+./bin/lutbork
+
+# Build all demo programs
+make
+
+# Run other demos
+make run-c      # Run C demo
+make run-cpp    # Run C++ demo
+make run-game   # Run dice game
+
+# Clean build files
+make clean
+```
+
+### Manual Compilation
+
+#### Windows
+```batch
+# LUTBORK system information tool
+gcc -Wall -Wextra -std=c99 -Isrc -c src/*.c
+gcc obj/*.o -o bin/lutbork.exe -lsetupapi
+
+# Other programs
+gcc -Wall -Wextra -std=c99 -o colorful_ascii.exe colorful_ascii.c
+gcc -Wall -Wextra -std=c99 -o game_ascii.exe game_ascii.c
+g++ -Wall -Wextra -std=c++11 -o ascii_art_cpp.exe ascii_art_cpp.cpp
+```
+
+#### Linux
+```bash
+# LUTBORK system information tool
+gcc -Wall -Wextra -std=c99 -Isrc -c src/*.c
+gcc obj/*.o -o bin/lutbork
+
+# Other programs
+gcc -Wall -Wextra -std=c99 -o colorful_ascii colorful_ascii.c
+gcc -Wall -Wextra -std=c99 -o game_ascii game_ascii.c
+g++ -Wall -Wextra -std=c++11 -o ascii_art_cpp ascii_art_cpp.cpp
+```
+
+## System Requirements
+
+### Windows
+- Windows 7 or later
+- GCC/MinGW or Visual Studio compiler
+- Windows Terminal or PowerShell for best color support
+- Administrator privileges recommended for complete hardware access
+
+### Linux
+- Any modern Linux distribution
+- GCC compiler
+- Root privileges recommended for complete system information
+- Terminal with ANSI color support
+
+## Sample Output
+
+### LUTBORK Hard Disk Information
+```
+=== HARD DISK INFORMATION ===
+----------------------------------------------------------------
+Hard Disk Drives:
+  + Drive C: - Fixed Drive (Hard Disk)
+      Total: 237.47 GB, Used: 236.99 GB, Free: 0.48 GB
+      Usage [###################-] 99%
+
+Physical Disks:
+  + Physical Drive 0: 238.47 GB (SSD)
+  + Physical Drive 1: 465.76 GB (HDD)
+```
+
+### Driver Information
+```
+=== INSTALLED DRIVERS ===
+----------------------------------------------------------------
+Device Drivers:
+  + Intel(R) Graphics Control Panel
+      HW ID: SWC\101.2134_VEN8086_GFXUI
+  + Samsung SSD disk drive
+      HW ID: SCSI\DiskSAMSUNG_SSD_____________MVT2
+  + USB Composite Device
+      HW ID: USB\VID_0BDA&PID_568C&REV_6053
+
+Total devices with drivers: 21+
+```
+
+### Kernel Information
+```
+=== KERNEL INFORMATION ===
+----------------------------------------------------------------
+Windows Kernel Information:
+  + Version: 10.0.26200
+  + Windows Edition: Windows 11
+  + Processor Architecture: x64 (AMD64)
+  + Number of Processors: 8
+  + Total Physical RAM: 7.86 GB
+  + RAM Usage [#################---] 88%
+```
+
+## Technical Implementation
+
+### Windows API Usage
+- **SetupDi API**: Device enumeration and driver information
+- **IOCTL calls**: Direct hardware communication for disk analysis
+- **WMI (Windows Management Instrumentation)**: System information queries
+- **Win32 API**: File system and memory information
+
+### Linux System Interfaces
+- **/proc filesystem**: Kernel and process information
+- **/sys filesystem**: Hardware and driver information
+- **uname system call**: Kernel version information
+- **sysinfo system call**: System statistics
+
+### Advanced Features
+- **Real-time Progress Bars**: Visual representation of disk and memory usage
+- **Color-coded Output**: Different colors for different types of information
+- **Sound Feedback**: Audio cues for user interaction and completion
+- **Animated Displays**: Smooth transitions and loading indicators
+- **Error Handling**: Graceful handling of permission and access issues
+
+## About Quick Red Tech
+
+**Quick Red Tech** is a technology company focused on developing innovative system tools and diagnostic software. Under the leadership of CEO **Chisom Life Eke**, the company delivers professional-grade software solutions for system administrators, developers, and technology enthusiasts.
+
+**LUTBORK** represents Quick Red Tech's commitment to creating powerful, user-friendly tools that provide deep system insights while maintaining clean, professional interfaces.
+
+## License
+
+This project is developed by **Chisom Life Eke** for **Quick Red Tech** (2026). All rights reserved.
+
+## Contact
+
+For questions, support, or business inquiries regarding LUTBORK or other Quick Red Tech products, please contact:
+
+**Chisom Life Eke**  
+Chief Executive Officer  
+Quick Red Tech  
+Year: 2026
 
 ## Features Demonstrated
 
